@@ -37,9 +37,7 @@ export default function Contact() {
 
         {contact.twitter ? (
           <p>
-            <a
-              href={`https://twitter.com/${contact.twitter}`}
-            >
+            <a href={`https://twitter.com/${contact.twitter}`}>
               {contact.twitter}
             </a>
           </p>
@@ -57,7 +55,7 @@ export default function Contact() {
             method="post"
             onSubmit={(event) => {
               const response = confirm(
-                "Please confirm you want to delete this record."
+                "Please confirm you want to delete this record.",
               );
               if (!response) {
                 event.preventDefault();
@@ -80,11 +78,7 @@ const Favorite: FunctionComponent<{
   return (
     <Form method="post">
       <button
-        aria-label={
-          favorite
-            ? "Remove from favorites"
-            : "Add to favorites"
-        }
+        aria-label={favorite ? "Remove from favorites" : "Add to favorites"}
         name="favorite"
         value={favorite ? "false" : "true"}
       >
